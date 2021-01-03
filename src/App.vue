@@ -1,12 +1,35 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view />
+    <FootBar>
+      <FootBarItem path="/purchase" activeColor="red">
+        <img slot="foot-icon" src="@/assets/barrage.png" alt="" />
+        <img slot="foot-icon-active" src="@/assets/barrage_fill.png" alt="" />
+        <p slot="foot-desc">采购</p>
+      </FootBarItem>
+      <FootBarItem path="/fruits">
+        <img slot="foot-icon" src="@/assets/fruits.png" alt="" />
+        <img slot="foot-icon-active" src="@/assets/fruits_fill.png" alt="" />
+        <p slot="foot-desc">品类</p>
+      </FootBarItem>
+      <FootBarItem path="/users">
+        <img slot="foot-icon" src="@/assets/people.png" alt="" />
+        <img slot="foot-icon-active" src="@/assets/people_fill.png" alt="" />
+        <p slot="foot-desc">用户</p>
+      </FootBarItem>
+    </FootBar>
+    <router-view></router-view>
   </div>
 </template>
+<script>
+import FootBar from "./components/footbar/FootBar";
+import FootBarItem from "./components/footbar/FootBarItem";
+export default {
+  components: {
+    FootBar,
+    FootBarItem
+  }
+};
+</script>
 
 <style lang="scss">
 #app {
@@ -15,15 +38,5 @@
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-}
-#nav {
-  padding: 30px;
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
 }
 </style>
