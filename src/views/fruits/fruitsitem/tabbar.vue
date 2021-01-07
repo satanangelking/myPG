@@ -7,11 +7,11 @@
 #fruits-tab-bar {
   position: fixed;
   left: 0;
-  top: 0;
+  top: 40px;
   right: 0;
   display: flex;
   flex-wrap: nowrap;
-  justify-content: space-between;
+  justify-content: space-around;
   white-space: nowrap;
   overflow-x: scroll;
   padding: 10px 0 10px;
@@ -19,7 +19,7 @@
   z-index: 90;
   background-color: white;
   div {
-    margin: 0 3px;
+    margin: 0 10px;
     padding: 3px 4px;
     border: 1px solid black;
     border-radius: 50%;
