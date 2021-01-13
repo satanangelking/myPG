@@ -7,3 +7,6 @@
     <div slot="p-tag">标签<input type="text" /></div>
   </div>
 </template>
+<script>
+export default {};
+</script>
