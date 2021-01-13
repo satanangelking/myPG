@@ -31,7 +31,7 @@ export default {
       } else {
         const res = await require({
           method: "post",
-          url: "/aac.php/",
+          url: "/login.php/",
           data: this.loginForm
         });
         const { data, meta } = res.data;

@@ -74,11 +74,11 @@ export default {
     register() {
       require({
         method: "post",
-        url: "/aax.php/",
+        url: "/register.php/",
         data: this.Rform
       }).then(res => {
         const data = res.data;
-        console.log(res);
+        // console.log(res);
         if (data.meta.code != 200) {
           alert(data.meta.message);
         } else {
