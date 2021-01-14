@@ -5,10 +5,7 @@ Vue.use(Vuex);
 const store = new Vuex.Store({
   state: {
     // 存储token
-    token: localStorage.getItem("token"),
-    Authorization: localStorage.getItem("Authorization")
-      ? localStorage.getItem("Authorization")
-      : ""
+    token: localStorage.getItem("token")
   },
 
   mutations: {

@@ -5,7 +5,7 @@
 npm install
 ```
 
-###
+### 运行配置
 ```
 数据库文件在src/php/mysql目录下，自己运行到数据库中。
 跨域请求配置在vue.config.js中,其中api中target为你自己运行数据库的服务器地址。

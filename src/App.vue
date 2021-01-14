@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <FootBar v-show="token">
+    <FootBar v-if="token">
       <FootBarItem path="/purchase" activeColor="red">
         <img slot="foot-icon" src="@/assets/app_footbar/barrage.png" alt="" />
         <img

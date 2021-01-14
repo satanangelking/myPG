@@ -34,13 +34,15 @@ export default {
           url: "/login.php/",
           data: this.loginForm
         });
-        const { data, meta } = res.data;
-
-        if (meta.code == 200) {
+        const data = res.data;
+        console.log(data);
+        if (data.meta.code == "200") {
           localStorage.setItem("token", data.token);
 
           this.$router.push("/purchase");
           window.location.reload(); //重新刷新页面
+        } else {
+          alert(data.meta.message);
         }
         // console.log(data);
         // console.log(meta);

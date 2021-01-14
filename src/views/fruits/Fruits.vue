@@ -92,7 +92,7 @@ export default {
       //不知道为什么better-scroll方法scroll的高比event.clientHeight 小1
       this.rights.on("scroll", pos => {
         // console.log(pos.y);
-        this.scrollY = Math.abs(Math.round(pos.y));
+        this.scrollY = Math.abs(Math.round(pos.y)) + 1;
       });
     },
     _getHeight() {

@@ -43,19 +43,23 @@ const routes = [
 ];
 
 const router = new Router({
+  mode: "history",
   routes
 });
 
 router.beforeEach((to, from, next) => {
+  let token = localStorage.getItem("token");
   if (to.path == "/login") {
-    next();
-  } else {
-    let token = localStorage.getItem("Authorization");
-    if (token == "null" || token == "") {
-      next("login");
+    // let token = localStorage.getItem("token");
+    if (token) {
+      next({
+        path: "/purchase"
+      });
     } else {
       next();
     }
+  } else {
+    next();
   }
 });
 
