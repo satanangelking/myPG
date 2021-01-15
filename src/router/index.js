@@ -6,7 +6,7 @@ import Fruits from "@/views/fruits/Fruits";
 import Users from "@/views/user/Users";
 import Login from "@/views/user/Login";
 import Register from "@/views/user/Register";
-
+import Setting from "@/views/user/setting/Setting";
 const originalPush = Router.prototype.push;
 Router.prototype.push = function push(location) {
   return originalPush.call(this, location).catch(err => err);
@@ -28,7 +28,13 @@ const routes = [
   {
     name: "Users",
     path: "/users",
-    component: Users
+    component: Users,
+    children: []
+  },
+  {
+    name: "Setting",
+    path: "/setting",
+    component: Setting
   },
   {
     name: "Login",
