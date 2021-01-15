@@ -7,6 +7,7 @@ import Users from "@/views/user/Users";
 import Login from "@/views/user/Login";
 import Register from "@/views/user/Register";
 import Setting from "@/views/user/setting/Setting";
+import UserChange from "@/views/user/setting/userchange/UserChange";
 const originalPush = Router.prototype.push;
 Router.prototype.push = function push(location) {
   return originalPush.call(this, location).catch(err => err);
@@ -35,6 +36,11 @@ const routes = [
     name: "Setting",
     path: "/setting",
     component: Setting
+  },
+  {
+    name: "UserChange",
+    path: "/userchange",
+    component: UserChange
   },
   {
     name: "Login",

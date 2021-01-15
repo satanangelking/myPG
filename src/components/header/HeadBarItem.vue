@@ -26,5 +26,9 @@ export default {
     width: 30px;
     height: 30px;
   }
+  p {
+    display: flex;
+    align-items: center;
+  }
 }
 </style>

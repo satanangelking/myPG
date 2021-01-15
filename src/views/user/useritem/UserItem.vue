@@ -1,43 +1,41 @@
 <template>
   <div class="user-item">
-    <div class="photo">
-      <slot name="photo"></slot>
-    </div>
     <div class="img">
-      <slot name="img"></slot>
+      <slot name="limg"></slot>
     </div>
     <div class="content">
       <slot name="content"></slot>
+    </div>
+    <div class="img">
+      <slot name="rimg"></slot>
     </div>
   </div>
 </template>
 <style lang="scss" scoped>
 .user-item {
-  background: gray;
-  margin-bottom: 5px;
+  height: 30px;
+  padding: 5px 0;
+  background: white;
+  margin-bottom: 10px;
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
+
   .content {
+    flex: 1;
     margin-left: 10px;
     display: flex;
     justify-content: center;
     flex-direction: column;
   }
-  .photo {
-    img {
-      width: 50px;
-      height: 70px;
-    }
-  }
   img {
     width: 30px;
     height: 30px;
-    margin: 10px 0;
     border-radius: 50%;
   }
   span {
     display: inline-block;
   }
+
   // .photo {
   //   img {
   //     width: 50px;

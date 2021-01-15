@@ -1,7 +1,7 @@
 <template>
   <div id="head-bar">
     <HeadBarItem>
-      <span>设置</span>
+      <p>设置</p>
     </HeadBarItem>
   </div>
 </template>
@@ -16,6 +16,9 @@ export default {
 <style lang="scss" scoped>
 #head-bar {
   padding-bottom: 10px;
+  background: white;
+  margin-bottom: 10px;
+  padding-top: 30px;
   box-shadow: 0 2px 2px black;
 }
 </style>

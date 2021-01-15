@@ -6,6 +6,7 @@
 <style lang="scss" scoped>
 #footbar {
   display: flex;
+  background: white;
   justify-content: space-around;
   position: fixed;
   left: 0;
