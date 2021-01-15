@@ -2,6 +2,7 @@
 
 ## Project setup
 ```
+正在开发ing(进度1/4)
 npm install
 ```
 

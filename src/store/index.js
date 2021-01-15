@@ -5,10 +5,17 @@ Vue.use(Vuex);
 const store = new Vuex.Store({
   state: {
     // 存储token
+    isFootBarShow: true,
     token: localStorage.getItem("token")
   },
 
   mutations: {
+    hide(state, data) {
+      state.isFootBarShow = data;
+    },
+    show(state, data) {
+      state.isFootBarShow = data;
+    },
     // 修改token，并将token存入localStorage
     changeLogin(state, user) {
       state.Authorization = user.Authorization;
