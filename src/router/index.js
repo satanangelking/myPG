@@ -8,6 +8,7 @@ import Login from "@/views/user/Login";
 import Register from "@/views/user/Register";
 import Setting from "@/views/user/setting/Setting";
 import UserChange from "@/views/user/setting/userchange/UserChange";
+import ChangePwd from "@/views/user/setting/userchange/passwordchange/ChangePwd";
 const originalPush = Router.prototype.push;
 Router.prototype.push = function push(location) {
   return originalPush.call(this, location).catch(err => err);
@@ -43,6 +44,11 @@ const routes = [
     component: UserChange
   },
   {
+    name: "PwdChange",
+    path: "/pwdchange",
+    component: ChangePwd
+  },
+  {
     name: "Login",
     path: "/login",
     component: Login
@@ -51,6 +57,10 @@ const routes = [
     name: "Register",
     path: "/register",
     component: Register
+  },
+  {
+    path: "*",
+    redirect: "/purchase"
   }
 ];
 

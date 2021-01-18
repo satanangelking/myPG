@@ -1,5 +1,8 @@
 <template>
   <div id="register">
+    <HeadBar>
+      <HeadBarItem> </HeadBarItem>
+    </HeadBar>
     <div>
       <label for="account">
         <span>用户名:</span>
@@ -27,7 +30,7 @@
     <div :class="{ alert: isActivePwd }">{{ Mpwd }}</div>
     <div>
       <label for="repwd">
-        <span>密码验证:</span>
+        <span>确认密码:</span>
         <input type="text" v-model="Rform.repwd" id="repwd" @blur="trepwd()" />
       </label>
     </div>
@@ -49,6 +52,8 @@
   </div>
 </template>
 <script>
+import HeadBar from "@/components/header/HeadBar";
+import HeadBarItem from "@/components/header/HeadBarItem";
 import require from "@/network/request.js";
 export default {
   data() {
@@ -69,6 +74,10 @@ export default {
       Mpwd: "",
       Mrepwd: ""
     };
+  },
+  components: {
+    HeadBar,
+    HeadBarItem
   },
   methods: {
     register() {
@@ -160,7 +169,6 @@ export default {
 
 <style lang="scss" scoped>
 #register {
-  padding: 10px;
   display: flex;
   flex-direction: column;
   div {

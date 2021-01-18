@@ -1,9 +1,21 @@
 <template>
   <div class="purchase-item">
-    <slot name="p-name"></slot>
-    <slot name="p-origin"></slot>
-    <slot name="p-price"></slot>
-    <slot name="p-weight"></slot>
-    <slot name="p-tag"></slot>
+    <slot></slot>
   </div>
 </template>
+<script>
+export default {
+  components: {}
+};
+</script>
+
+<style lang="scss" scoped>
+.purchase-item {
+  margin-top: 10px;
+  div {
+    background: white;
+    padding: 5px 5px;
+    margin-bottom: 10px;
+  }
+}
+</style>

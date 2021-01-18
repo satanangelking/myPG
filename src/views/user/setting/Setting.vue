@@ -1,7 +1,18 @@
 <template>
   <div id="setting">
-    <HeadBar></HeadBar>
-    <div @click='account'>
+    <HeadBar>
+      <HeadBarItem>
+        <p>设置</p>
+      </HeadBarItem>
+    </HeadBar>
+    <div @click="usermessagechange">
+      <UserItem>
+        <img slot="limg" src="@/assets/common/账号资料管理.png" alt="" />
+        <span slot="content">账号资料</span>
+        <img slot="rimg" src="@/assets/common/右箭头.png" alt="" />
+      </UserItem>
+    </div>
+    <div @click="accountchange">
       <UserItem>
         <img slot="limg" src="@/assets/common/账号安全.png" alt="" />
         <span slot="content">账号安全</span>
@@ -26,18 +37,20 @@
 <script>
 import UserItem from "@/views/user/useritem/UserItem";
 import HeadBar from "@/components/header/HeadBar";
+import HeadBarItem from "@/components/header/HeadBarItem";
 export default {
   components: {
     UserItem,
-    HeadBar
+    HeadBar,
+    HeadBarItem
   },
   methods: {
     quit() {
       localStorage.removeItem("token");
       window.location.reload();
     },
-    account(){
-      this.$router.push('/userchange')
+    accountchange() {
+      this.$router.push("/userchange");
     }
   }
 };

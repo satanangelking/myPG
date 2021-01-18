@@ -1,8 +1,6 @@
 <template>
   <div id="head-bar">
-    <HeadBarItem>
-      <p>设置</p>
-    </HeadBarItem>
+    <slot></slot>
   </div>
 </template>
 <script>

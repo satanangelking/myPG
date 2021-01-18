@@ -5,6 +5,7 @@
     </div>
     <div class="content">
       <slot name="content"></slot>
+      <slot name="input"></slot>
     </div>
     <div class="img">
       <slot name="rimg"></slot>
@@ -24,8 +25,8 @@
     flex: 1;
     margin-left: 10px;
     display: flex;
-    justify-content: center;
-    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
   }
   img {
     width: 30px;
