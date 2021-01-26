@@ -15,7 +15,13 @@
     <PurchaseItem>
       <PurchaseItemInput label_name="name">
         <span slot="name">名称</span>
-        <input type="text" slot="input" id="name" v-model="purchasefrom.name" />
+        <input
+          type="text"
+          slot="input"
+          id="name"
+          v-model="purchasefrom.name"
+          :input="inputFunc"
+        />
       </PurchaseItemInput>
       <PurchaseItemInput label_name="weight">
         <span slot="name">重量</span>
@@ -97,6 +103,15 @@ export default {
       const data = res.data;
       if (data.meta.code != 200) {
         alert(data.meta.message);
+      }
+    },
+    inputFunc() {
+      if (this.purchasefrom.name.trim()) {
+        require({
+          method: "post",
+          url: "/fruit_name.php/",
+          data: this.purchasefrom
+        });
       }
     },
     GetDateNow() {
